@@ -1,0 +1,49 @@
+.gradle
+/build/
+
+target/
+.idea
+log/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea/*
+*.iws
+*.iml
+*.ipr
+.jpb
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Log Files ###
+.log
+*.log
+LOG_FILE_IS_UNDEFINED*
+
+### Docker Images ###
+**/docker/**/.cache
+
+# Performance #
+/performance/results/
+/performance/build/
+/src/main/generated/
+/e2e/target/
+/src/main/resources/application-local.properties
+
+bin/*
+*.sh
+*.json
