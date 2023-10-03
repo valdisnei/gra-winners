@@ -56,7 +56,7 @@ public class AppConfig {
         CsvSchema csvSchema = csvMapper
                 .typedSchemaFor(MovieDTO.class)
                 .withUseHeader(true)
-                .withColumnSeparator(',');
+                .withColumnSeparator(';');
 
         try {
             InputStream inputStream = AppConfig.class.getResourceAsStream("/movielist.csv");

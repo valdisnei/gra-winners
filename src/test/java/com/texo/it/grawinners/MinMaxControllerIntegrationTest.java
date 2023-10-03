@@ -35,24 +35,20 @@ class MinMaxControllerIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(jsonPath("$.min[0].interval").value(1))
-                .andExpect(jsonPath("$.min[0].producer").value("Bo Derek"))
-                .andExpect(jsonPath("$.min[0].previousWin").value(1984))
-                .andExpect(jsonPath("$.min[0].followingWin").value(1985))
+                .andExpect(jsonPath("$.min[0].producer").value("Joel Silver"))
+                .andExpect(jsonPath("$.min[0].previousWin").value(1990))
+                .andExpect(jsonPath("$.min[0].followingWin").value(1991))
 
-                .andExpect(jsonPath("$.min[1].interval").value(1))
-                .andExpect(jsonPath("$.min[1].producer").value("Lorenzo di Bonaventura,Ian Bryce,Tom DeSanto and Don Murphy"))
-                .andExpect(jsonPath("$.min[1].previousWin").value(2010))
-                .andExpect(jsonPath("$.min[1].followingWin").value(2011))
+                .andExpect(jsonPath("$.max[0].interval").value(6))
+                .andExpect(jsonPath("$.max[0].producer").value("Bo Derek"))
+                .andExpect(jsonPath("$.max[0].previousWin").value(1984))
+                .andExpect(jsonPath("$.max[0].followingWin").value(1990))
 
-                .andExpect(jsonPath("$.max[0].interval").value(8))
-                .andExpect(jsonPath("$.max[0].producer").value("Lorenzo di Bonaventura,Ian Bryce,Tom DeSanto and Don Murphy"))
-                .andExpect(jsonPath("$.max[0].previousWin").value(2015))
-                .andExpect(jsonPath("$.max[0].followingWin").value(2023))
+                .andExpect(jsonPath("$.max[1].interval").value(9))
+                .andExpect(jsonPath("$.max[1].producer").value("Buzz Feitshans"))
+                .andExpect(jsonPath("$.max[1].previousWin").value(1985))
+                .andExpect(jsonPath("$.max[1].followingWin").value(1994));
 
-                .andExpect(jsonPath("$.max[1].interval").value(2))
-                .andExpect(jsonPath("$.max[1].producer").value("Joel Silver"))
-                .andExpect(jsonPath("$.max[1].previousWin").value(1989))
-                .andExpect(jsonPath("$.max[1].followingWin").value(1991));
 
     }
 
