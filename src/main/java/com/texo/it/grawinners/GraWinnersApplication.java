@@ -45,7 +45,9 @@ public class GraWinnersApplication implements CommandLineRunner {
                             .toList().stream()
                             .filter(Strings::isNotBlank)
                             .forEach(producer -> {
+                                row.setProducers(producer);
                                 Producer savedProducer = producerUseCase.saveProducers(row, producer);
+
                                 movieProducerRepository.save(new MovieProducer(movie, savedProducer));
                             });
                 });
